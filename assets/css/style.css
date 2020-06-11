@@ -1,0 +1,157 @@
+/* ==========Body========== */
+
+body{
+    max-width: 100%;
+}
+ul {
+    padding: 0;
+}
+li {
+    padding-top: 5px;
+}
+h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+/* ==========Header=========*/
+
+.nav-bar {
+    /*height: 50px;*/
+    background-color: #000000;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    /*padding-bottom: 50px;*/
+}
+.navigation {
+    display: flex;
+    /*align-self: flex-end;*/
+    justify-content: space-between;
+    width: 1000px;
+}
+.navigation > a {
+    color: cornsilk;
+    text-decoration: none;
+    font-size: 30px;
+
+    /*margin-left: 50px;*/
+    justify-content: space-between;
+    align-self: flex-end;
+    padding-bottom: 5px;
+}
+.navigation > img {
+    width: 20px;
+    height: 20px;
+}
+.logo {
+    width: 100px;
+    justify-content: flex-start;
+    object-fit: cover;
+    padding-left: 30px;
+}
+.logo img {
+    width: 50px;
+    transform: rotate(-90deg);
+    object-fit: cover;
+}
+.cart-logo img{
+    width: 30px;
+}
+.user-logo {
+    align-self: flex-end;
+}
+.user-logo img {
+    width: 30px;
+    align-self: flex-end;
+    padding-right: 30px;
+}
+
+/* ==========Footer=========*/
+
+.footer {
+    background-color: black;
+    display: flex;
+    /*margin-top: 60px;*/
+    color: white;
+    justify-content: space-evenly;
+    margin-top: 200px;
+}
+.footer-logo {
+    transform: rotate(180deg);
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 125px;
+}
+.footer-logo > img {
+    width: 100%;
+}
+.logo-holder {
+    display: flex;
+}
+.logo-container {
+    width: 40px;
+    padding: 0 9px;
+}
+.contact {
+    /*padding-left: 40px;*/
+    padding-top: 30px;
+}
+.contact > ul {
+    font-size: 20px;
+    padding-left: 30px;
+}
+.personnalisation {
+    padding-top: 30px;
+}
+.personnalisation > ul {
+    font-size: 20px;
+    padding-left: 30px;
+}
+.follow {
+    padding-top: 30px;
+}
+.social-logo {
+    width: 100%;
+}
+.list-footer > a {
+    text-decoration: none;
+    color: white;
+}
+.footline {
+    background-color: rgba(100,63,2,0.91);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.footline > p {
+    font-weight: bold;
+    font-size: 20px;
+}
+.footline > a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+.payment-logo {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    justify-content: flex-end;
+}
+.little-logo {
+    width: 100%;
+}
+
+/* ==========Index=========*/
+
+.big-pic {
+    width: 700px;
+    height: 300px;
+    margin-bottom: 100px;
+}
+.pic-big {
+    width: 100%;
+}
