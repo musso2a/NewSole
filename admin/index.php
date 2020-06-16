@@ -9,18 +9,22 @@ require ('../helpers.php');
 
 if(isset($_GET['controller'])){
 	switch ($_GET['controller']){
-		case 'artists' :
-            require 'controllers/artistController.php';
+		case 'chaussures' :
+            require 'controllers/shoesController.php';
             break;
-        case 'albums' :
-            require 'controllers/albumController.php';
+        case 'semelles' :
+            require 'controllers/solesController.php';
             break;
-        case 'songs' :
-            require 'controllers/songController.php';
+        case 'customs' :
+            require 'controllers/customsController.php';
             break;
-        case 'labels' :
-            require 'controllers/labelController.php';
+        case 'commandes' :
+            require 'controllers/ordersController.php';
             break;
+        case 'users' :
+            require 'controllers/usersController.php';
+            break;
+
         default :
             require 'controllers/indexController.php';
 	}

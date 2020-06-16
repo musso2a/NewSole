@@ -15,7 +15,7 @@ if(isset($_GET['page'])):
             require 'controllers/productsController.php';
             break;
 
-        case 'A%20propos' :
+        case 'Apropos' :
             require 'controllers/aboutController.php';
             break;
 

@@ -147,11 +147,197 @@ h3 {
 
 /* ==========Index=========*/
 
-.big-pic {
-    width: 700px;
-    height: 300px;
+.banner-container {
+    background-image: url("../img/bigpic.jpg");
+    width: 100%;
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     margin-bottom: 100px;
 }
-.pic-big {
+.inner-container {
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+.page-title {
+    display: flex;
+    justify-content: center;
+}
+.product-line {
+    display: flex;
+    height: 100%;
+}
+.product-container {
+    height: 500px;
+    width: 300px;
+}
+.product-img {
     width: 100%;
 }
+.shoes-img {
+    width: 100%;
+}
+.product-name {
+    margin: 0;
+}
+.price-size {
+    display: flex;
+    width: 50px;
+}
+.size {
+    margin: 0;
+    width: 20px;
+}
+.price {
+    margin: 0;
+}
+.add-button {
+    background-color:#f5d7ab;
+    border-radius: 42px;
+    text-indent:0;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial Black;
+    font-size:37px;
+    font-weight:bold;
+    font-style:normal;
+    height:51px;
+    line-height:51px;
+    width:51px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #f2ca9a;
+}
+.add-button:hover {
+     background-color:#f2ca9a;
+ }
+.add-button:active {
+       position: relative;
+       top: 1px;
+   }
+
+@media only screen and (max-width: 920px) {
+    .big-pic {
+        margin-top: 100px;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .big-pic {
+        margin-top: 150px;
+    }
+}
+
+/* ==========About=========*/
+
+.about-line {
+    height: 400px;
+    display: flex;
+    margin: 0 200px;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.about-img {
+    height: 400px;
+    width: 200px;
+}
+.custom-img {
+    width: 100%;
+}
+.custom-about {
+    width: 500px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-title {
+    margin-top: 0px;
+    align-content: flex-start;
+    text-align: start;
+}
+.title-div {
+    align-self: flex-start;
+}
+.about-button {
+    background-color:#f5d7ab;
+    -webkit-border-radius: 42px;
+    -moz-border-radius: 42px;
+    border-radius: 42px;
+    text-indent:0;
+    border:1px solid #f4ac53;
+    display:inline-block;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    font-weight:bold;
+    font-style:normal;
+    height:48px;
+    line-height:48px;
+    width:182px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:-1px 1px 0px #736049;
+}.custom-boutton:hover {
+     background-color:#f2ca9a;
+ }
+.custom-boutton:active {
+       /*position: relative;*/
+       top: 1px;
+   }
+
+/* ==========Login=========*/
+
+.form-container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row
+}
+.connect {
+    align-content: center;
+    width: 300px;
+}
+.connect h2 {
+    text-align: center;
+}
+.connect > form {
+    justify-content: center;
+}
+.connect > form > input {
+    border-radius: 30px;
+    margin: 20px 0;
+    text-align: center;
+    outline: 0px;
+    align-content: center;
+}
+.connect > form > button {
+    margin-top: 20px;
+    margin-left: 10px
+}
+
+/* ==========Products=========*/
+
+.title-category {
+    display: flex;
+    justify-content: center;
+    border-bottom: darkgrey solid 1px;
+}
+.category-choice {
+    align-self: center;
+    justify-content: flex-end;
+}
+.select-category {
+    height: 20px;
+    align-self: center;
+}
+
+/* ==========Repair=========*/
+
+.form-line {
+    display: flex;
+}
+
+/* ==========Custom=========*/
