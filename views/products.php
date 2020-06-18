@@ -25,19 +25,21 @@
     </select>
 </div>
 <div class="product-line">
+    <?php foreach ($products as $product): ?>
     <div class="product-container">
         <div class="product-img">
             <img src="assets/img/shoe.jpg" alt="" class="shoes-img">
         </div>
         <br>
-        <h4 class="product-name">ADADAS 3500</h4>
+        <h4 class="product-name"><?= $product['name'] ?></h4>
         <div class="price-size">
-            <p class="size">42</p>
-            <p class="price">350€</p>
+            <p class="size"><?= $product['size'] ?></p>
+            <p class="price"><?= $product['price'] ?></p>
         </div>
         <a href="#" class="add-button">+</a>
-
+        <?php endforeach; ?>
     </div>
+
 </div>
 <?php require 'partials/footer.html'?>
 </body>

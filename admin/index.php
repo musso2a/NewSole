@@ -9,20 +9,24 @@ require ('../helpers.php');
 
 if(isset($_GET['controller'])){
 	switch ($_GET['controller']){
-		case 'chaussures' :
+		case 'shoes' :
             require 'controllers/shoesController.php';
             break;
-        case 'semelles' :
+        case 'soles' :
             require 'controllers/solesController.php';
             break;
         case 'customs' :
             require 'controllers/customsController.php';
             break;
-        case 'commandes' :
+        case 'orders' :
             require 'controllers/ordersController.php';
             break;
         case 'users' :
             require 'controllers/usersController.php';
+            break;
+
+        case 'categories' :
+            require 'controllers/categoriesController.php';
             break;
 
         default :

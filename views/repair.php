@@ -36,26 +36,26 @@
         <button type="submit" class="repair-form-button">Envoyer</button>
 
     </form>
+</div>
+<h1 class="product-title">Nos Semelles</h1>
 
-        <h1 class="product-title">Nos Semelles</h1>
-
-    <div class="product-line">
-        <div class="product-container">
-            <div class="product-img">
-                <img src="assets/img/semelle-4.jpg" alt="" class="shoes-img">
-            </div>
-            <br>
-            <h4 class="product-name">ADADAS 3500</h4>
-            <div class="price-size">
-                <p class="size">42</p>
-                <p class="price">350€</p>
-            </div>
-            <a href="#" class="add-button">+</a>
-
+<div class="product-line">
+    <?php foreach($soles as $sole):?>
+    <div class="product-container">
+        <div class="product-img">
+            <img src="assets/img/semelle-4.jpg" alt="" class="shoes-img">
         </div>
+        <br>
+        <h4 class="product-name"><?= $sole['name'] ?></h4>
+        <div class="price-size">
+            <p class="size"><?= $sole['size'] ?></p>
+            <p class="price"><?= $sole['price'] ?></p>
+        </div>
+        <a href="#" class="add-button">+</a>
+        <?php endforeach;?>
     </div>
-
 </div>
 <?php require 'partials/footer.html'?>
 </body>
+
 </html>

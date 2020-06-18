@@ -169,6 +169,7 @@ h3 {
 .product-line {
     display: flex;
     height: 100%;
+
 }
 .product-container {
     height: 500px;
@@ -337,7 +338,17 @@ h3 {
 /* ==========Repair=========*/
 
 .form-line {
+    width: 100vw;
     display: flex;
+    height: 50vh;
 }
-
+.repair-carrousel {
+    width: 50vw;
+}
+.repair-form {
+    width: 50vw;
+}
+.product-title {
+    text-align: center;
+}
 /* ==========Custom=========*/

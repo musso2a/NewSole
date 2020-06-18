@@ -1,0 +1,36 @@
+/* ==========Body=========*/
+body{
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+/* ==========Header=========*/
+
+.nav-bar {
+    /*height: 50px;*/
+    background-color: #000000;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    /*padding-bottom: 50px;*/
+}
+.navigation {
+    display: flex;
+    /*align-self: flex-end;*/
+    justify-content: space-between;
+    width: 1000px;
+}
+.navigation > a {
+    color: cornsilk;
+    text-decoration: none;
+    font-size: 30px;
+
+    /*margin-left: 50px;*/
+    justify-content: space-between;
+    align-self: flex-end;
+    padding-bottom: 5px;
+}
+
