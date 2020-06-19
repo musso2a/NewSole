@@ -2,8 +2,10 @@
 
 session_start();
 
-// pour le projet ne pas oublier de vérifier si l'utilisateur est connecté ET qu'il est admin
-//sinon le renvoyer vers la page d'accueil du site
+//if(!isset($_SESSION['user']) || $_SESSION['user']['is_admin'] == 0){
+//    header('Location:index.php');
+//    exit;
+//}
 
 require ('../helpers.php');
 

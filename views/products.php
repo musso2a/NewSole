@@ -24,7 +24,7 @@
 
     </select>
 </div>
-<div class="product-line">
+<section class="product-line">
     <?php foreach ($products as $product): ?>
     <div class="product-container">
         <div class="product-img">
@@ -37,10 +37,10 @@
             <p class="price"><?= $product['price'] ?></p>
         </div>
         <a href="#" class="add-button">+</a>
-        <?php endforeach; ?>
-    </div>
 
-</div>
+    </div>
+    <?php endforeach; ?>
+</section>
 <?php require 'partials/footer.html'?>
 </body>
 </html>

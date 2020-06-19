@@ -39,22 +39,23 @@
 </div>
 <h1 class="product-title">Nos Semelles</h1>
 
-<div class="product-line">
+<section class="product-line">
     <?php foreach($soles as $sole):?>
     <div class="product-container">
         <div class="product-img">
-            <img src="assets/img/semelle-4.jpg" alt="" class="shoes-img">
+            <img src="assets/img/shoe.jpg" alt="" class="shoes-img">
         </div>
         <br>
-        <h4 class="product-name"><?= $sole['name'] ?></h4>
-        <div class="price-size">
-            <p class="size"><?= $sole['size'] ?></p>
-            <p class="price"><?= $sole['price'] ?></p>
+        <div class="product-info">
+            <h4 class="product-name"><?= $sole['name'] ?></h4>
+            <p class="size"><?= $sole['size'] ?></p><p class="price"><?= $sole['price'] ?></p>
+
         </div>
         <a href="#" class="add-button">+</a>
-        <?php endforeach;?>
+
     </div>
-</div>
+    <?php endforeach;?>
+</section>
 <?php require 'partials/footer.html'?>
 </body>
 

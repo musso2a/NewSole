@@ -31,7 +31,7 @@
 
         <h2>INSCRIPTION</h2>
         <p>Prêt a rentrer dans la famille ?</p>
-        <a href="index.php?p=registration&action=new" class="about-button">S'inscrire</a>
+        <a href="index.php?page=register&action=new" class="about-button">S'inscrire</a>
 
     </div>
 </div>

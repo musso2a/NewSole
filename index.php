@@ -31,6 +31,10 @@ if(isset($_GET['page'])):
             require 'controllers/loginController.php';
             break;
 
+        case 'register' :
+            require 'controllers/userController.php';
+            break;
+
         default :
             require 'controllers/indexController.php';
     endswitch;

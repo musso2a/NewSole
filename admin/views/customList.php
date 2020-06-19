@@ -22,13 +22,50 @@
 
 <h2>ici la liste complète des produits : </h2>
 
-<a href="index.php?controller=customs&action=new">Ajouter un nouveau produit</a>
-
+<a href="index.php?controller=customs&action=new">Ajouter un nouveau produit</a><br>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Nom</td>
+        <td>Taille</td>
+        <td>Prix</td>
+        <td>Quantity</td>
+        <td>Description</td>
+        <td>Image</td>
+        <td>Action</td>
+    </tr>
+<tbody>
 <?php foreach($customs as $custom): ?>
-    <p><?=  htmlspecialchars($custom['name']) ?>
+    <tr>
+        <td>
+            <?= $custom['id'] ?>
+        </td>
+        <td>
+        <?=  htmlspecialchars($custom['name']) ?>
+        </td>
+        <td>
+            <?= $custom['size'] ?>
+        </td>
+        <td>
+            <?= $custom['price'] ?>
+        </td>
+        <td>
+            <?= $custom['quantity'] ?>
+        </td>
+        <td>
+            <?= $custom['description'] ?>
+        </td>
+        <td>
+            <?= $custom['image'] ?>
+        </td>
+        <td>
         <a href="index.php?controller=customs&action=edit&id=<?= $custom['id'] ?>">modifier</a>
         <a href="index.php?controller=customs&action=delete&id=<?= $custom['id'] ?>">supprimer</a></p>
+        </td>
+    </tr>
 <?php endforeach; ?>
+</table>
+</div>
 </body>
 </html>
 
