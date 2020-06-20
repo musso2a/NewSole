@@ -30,7 +30,7 @@ if ($_GET['action'] == 'list') {
         header('Location:index.php?controller=shoes&action=new');
         exit;
     } else {
-        $resultAdd = addShoe($_POST);
+        $resultAdd = addShoe($_POST, $_FILES);
 
         $_SESSION['messages'][] = $resultAdd ? 'Nouvelle paire enregistré !' : "Erreur lors de l'enregistrement de la paire... :(";
 
@@ -56,7 +56,7 @@ if ($_GET['action'] == 'list') {
             header('Location:index.php?controller=shoes&action=edit&id=' . $_GET['id']);
             exit;
         } else {
-            $result = updateShoe($_GET['id'], $_POST);
+            $result = updateShoe($_GET['id'], $_POST, $_FILES);
             $_SESSION['messages'][] = $result ? 'Produits mis à jour !' : 'Erreur lors de la mise à jour... :(';
             header('Location:index.php?controller=shoes&action=list');
             exit;

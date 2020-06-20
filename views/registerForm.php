@@ -23,7 +23,7 @@
 
 <h1>ici formulaire des d'inscription</h1><br><br>
 
-<form action="index.php?controller=register&action=<?= isset($custom) ||  (isset($_SESSION['old_inputs']) && $_GET['action'] == 'edit') ? 'edit&id='. $_GET['id'] : 'add' ?>" method="post" enctype="multipart/form-data">
+<form action="index.php?controller=register&action=add"> method="post" enctype="multipart/form-data">
 
     <label for="last-name">Nom :</label>
     <input  type="text" name="name" id="name" value="" /><br>

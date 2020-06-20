@@ -25,7 +25,7 @@ function getShoe($id)
     return $result;
 }
 
-function updateShoe($id, $informations)
+function updateShoe($id, $informations, $img)
 {
     $db = dbConnect();
 
@@ -41,10 +41,23 @@ function updateShoe($id, $informations)
         ]
     );
 
+    if ($result && isset($img['image']['tmp_name'])) {
+
+        $allowed_extensions = array('jpg', 'jpeg', 'gif', 'png');
+        $my_file_extension = pathinfo($img['image']['name'], PATHINFO_EXTENSION);
+        if (in_array($my_file_extension, $allowed_extensions)) {
+            $new_file_name = $id . '.' . $my_file_extension;
+            $destination = '../assets/img/shoes/' . $new_file_name;
+            $result = move_uploaded_file($img['image']['tmp_name'], $destination);
+
+            $db->query("UPDATE shoes SET image = '$new_file_name' WHERE id = $id");
+        }
+    }
+
     return $result;
 }
 
-function addShoe($informations)
+function addShoe($informations, $img)
 {
     $db = dbConnect();
 
@@ -60,11 +73,11 @@ function addShoe($informations)
         $shoeId = $db->lastInsertId();
 
         $allowed_extensions = array('jpg', 'jpeg', 'gif', 'png');
-        $my_file_extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+        $my_file_extension = pathinfo($img['image']['name'], PATHINFO_EXTENSION);
         if (in_array($my_file_extension, $allowed_extensions)) {
             $new_file_name = $shoeId . '.' . $my_file_extension;
-            $destination = '../assets/images/artist/' . $new_file_name;
-            $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
+            $destination = '../assets/img/shoes/' . $new_file_name;
+            $result = move_uploaded_file($img['image']['tmp_name'], $destination);
 
             $db->query("UPDATE shoes SET image = '$new_file_name' WHERE id = $shoeId");
         }

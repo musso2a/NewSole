@@ -31,10 +31,11 @@
             <img src="assets/img/shoe.jpg" alt="" class="shoes-img">
         </div>
         <br>
-        <h4 class="product-name"><?= $product['name'] ?></h4>
+        <h4 class="product-name"><?= $product['name']; ?></h4>
         <div class="price-size">
-            <p class="size"><?= $product['size'] ?></p>
-            <p class="price"><?= $product['price'] ?></p>
+            <p class="size"><?= $product['size']; ?></p>
+            <p class="price"><?= $product['price']; ?></p>
+            <a href="index.php?page=product&product_id=<?= $product['id']; ?>">Voir le produit</a>
         </div>
         <a href="#" class="add-button">+</a>
 

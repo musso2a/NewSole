@@ -23,7 +23,7 @@
 
 </div>
 <h2 class="page-title">Notre Sélection</h2>
-    <section class="product-line"
+    <section class="product-line">
 
         <?php
         $selectedProducts = [];
@@ -37,7 +37,9 @@
             $selectedProducts[] = $nb;
             ?>
             <div class="product-container">
-<!--                <img src="images/products/--><?//= $product['images'][0]; ?><!--" class="img-fluid mb-3" alt="--><?//= $product['name']; ?><!--">-->
+                <div class="product-img">
+                <img src="images/products/<?= $product['image']; ?>" class="" alt="<?= $product['name']; ?>">
+                </div>
                 <h3><?= $product['name']; ?></h3>
                 <div class="mb-3">Catégorie :
                     <?php foreach($categories as $category): ?>
@@ -49,20 +51,10 @@
                 <div><?= $product['size']; ?></div>
                 <h4><?= $product['price']; ?> €</h4>
                 <a href="index.php?page=product&product_id=<?= $product['id']; ?>">Voir le produit</a>
+                <a href="#" class="add-button">+</a>
             </div>
         <?php endfor; ?>
     </section>
-</div>
-
-
-
-
-
-
-
-
-
-
 </body>
 <?php require 'partials/footer.html'?>
 </html>

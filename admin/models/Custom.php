@@ -24,7 +24,7 @@ function getCustom($id)
     return $result;
 }
 
-function updateCustom($id, $informations)
+function updateCustom($id, $informations, $img)
 {
     $db = dbConnect();
 
@@ -40,10 +40,24 @@ function updateCustom($id, $informations)
         ]
     );
 
+    if ($result && isset($img['image']['tmp_name'])) {
+
+        $allowed_extensions = array('jpg', 'jpeg', 'gif', 'png');
+        $my_file_extension = pathinfo($img['image']['name'], PATHINFO_EXTENSION);
+        if (in_array($my_file_extension, $allowed_extensions)) {
+            $new_file_name = $id . '.' . $my_file_extension;
+            $destination = '../assets/img/customs/' . $new_file_name;
+            $result = move_uploaded_file($img['image']['tmp_name'], $destination);
+
+            $db->query("UPDATE products SET image = '$new_file_name' WHERE id = $id");
+        }
+
+    }
+
     return $result;
 }
 
-function addCustom($informations)
+function addCustom($informations, $img)
 {
     $db = dbConnect();
 
@@ -56,18 +70,19 @@ function addCustom($informations)
         'category_id' => $informations['category_id'],
     ]);
 
-    if ($result && isset($_FILES['image']['tmp_name'])) {
+    if ($result && isset($img['image']['tmp_name'])) {
         $productId = $db->lastInsertId();
 
         $allowed_extensions = array('jpg', 'jpeg', 'gif', 'png');
-        $my_file_extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+        $my_file_extension = pathinfo($img['image']['name'], PATHINFO_EXTENSION);
         if (in_array($my_file_extension, $allowed_extensions)) {
             $new_file_name = $productId . '.' . $my_file_extension;
-            $destination = '../../assets/images/customs/' . $new_file_name;
-            $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
+            $destination = '../assets/img/customs/' . $new_file_name;
+            $result = move_uploaded_file($img['image']['tmp_name'], $destination);
 
             $db->query("UPDATE products SET image = '$new_file_name' WHERE id = $productId");
         }
+
     }
 
     return $result;

@@ -25,7 +25,7 @@ function getSole($id)
     return $result;
 }
 
-function updateSole($id, $informations)
+function updateSole($id, $informations, $img)
 {
     $db = dbConnect();
 
@@ -41,10 +41,24 @@ function updateSole($id, $informations)
         ]
     );
 
+    if ($result && isset($img['image']['tmp_name'])) {
+
+        $allowed_extensions = array('jpg', 'jpeg', 'gif', 'png');
+        $my_file_extension = pathinfo($img['image']['name'], PATHINFO_EXTENSION);
+        if (in_array($my_file_extension, $allowed_extensions)) {
+            $new_file_name = $id . '.' . $my_file_extension;
+            $destination = '../assets/img/soles/' . $new_file_name;
+            $result = move_uploaded_file($img['image']['tmp_name'], $destination);
+
+            $db->query("UPDATE soles SET image = '$new_file_name' WHERE id = $id");
+        }
+
+    }
+
     return $result;
 }
 
-function addSole($informations)
+function addSole($informations, $img)
 {
     $db = dbConnect();
 
@@ -64,7 +78,7 @@ function addSole($informations)
         $my_file_extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
         if (in_array($my_file_extension, $allowed_extensions)) {
             $new_file_name = $soleId . '.' . $my_file_extension;
-            $destination = '../assets/images/artist/' . $new_file_name;
+            $destination = '../assets/img/soles/' . $new_file_name;
             $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
             $db->query("UPDATE soles SET image = '$new_file_name' WHERE id = $soleId");

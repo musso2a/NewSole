@@ -33,7 +33,7 @@ if ($_GET['action'] == 'list') {
         header('Location:index.php?controller=customs&action=new');
         exit;
     } else {
-        $resultAdd = addCustom($_POST);
+        $resultAdd = addCustom($_POST, $_FILES);
 
         $_SESSION['messages'][] = $resultAdd ? 'Nouvelle paire enregistré !' : "Erreur lors de l'enregistrement de la paire... :(";
 
@@ -62,7 +62,7 @@ if ($_GET['action'] == 'list') {
             header('Location:index.php?controller=customs&action=edit&id=' . $_GET['id']);
             exit;
         } else {
-            $result = updateCustom($_GET['id'], $_POST);
+            $result = updateCustom($_GET['id'], $_POST, $_FILES);
             $_SESSION['messages'][] = $result ? 'Produits mis à jour !' : 'Erreur lors de la mise à jour... :(';
             header('Location:index.php?controller=customs&action=list');
             exit;

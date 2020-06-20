@@ -29,6 +29,11 @@ ici formulaire des Categories<br><br>
     <label for="name">Nom :</label>
     <input  type="text" name="name" id="name" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['name'] : '' ?><?= isset($category) ? $category['name'] : '' ?>" /><br>
 
+    <label for="description">Bio :</label>
+    <textarea name="description" id="description"><?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['description'] : '' ?><?= isset($category) ? $category['description'] : '' ?></textarea><br>
+
+    <label for="image">Image :</label><br>
+    <input  type="file" name="image" id="image"/><br>
 
     <input type="submit" value="Enregistrer" />
 

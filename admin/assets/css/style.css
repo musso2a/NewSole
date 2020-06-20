@@ -33,4 +33,26 @@ a {
     align-self: flex-end;
     padding-bottom: 5px;
 }
-
+.navigation > img {
+    width: 20px;
+    height: 20px;
+}
+.logo {
+    width: 100px;
+    justify-content: flex-start;
+    object-fit: cover;
+    padding-left: 30px;
+}
+.logo img {
+    width: 50px;
+    transform: rotate(-90deg);
+    object-fit: cover;
+}
+.logout {
+    align-self: flex-end;
+}
+.logout img {
+    width: 30px;
+    align-self: flex-end;
+    padding-right: 30px;
+}

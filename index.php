@@ -1,6 +1,8 @@
 <?php
 require('helpers.php');
 
+session_start();
+
 if(isset($_GET['page'])):
     switch ($_GET['page']):
         case 'Customisation' :
@@ -33,6 +35,10 @@ if(isset($_GET['page'])):
 
         case 'register' :
             require 'controllers/userController.php';
+            break;
+
+        case 'product' :
+            require 'controllers/articleController.php';
             break;
 
         default :

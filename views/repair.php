@@ -49,7 +49,7 @@
         <div class="product-info">
             <h4 class="product-name"><?= $sole['name'] ?></h4>
             <p class="size"><?= $sole['size'] ?></p><p class="price"><?= $sole['price'] ?></p>
-
+<!--            <a href="index.php?page=product&product_id=--><?//= $product['id']; ?><!--">Voir le produit</a>-->
         </div>
         <a href="#" class="add-button">+</a>
 

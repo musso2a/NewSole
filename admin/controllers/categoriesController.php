@@ -10,7 +10,7 @@ if ($_GET['action'] == 'list') {
     require('views/categoryList.php');
 
 } elseif ($_GET['action'] == 'new') {
-    require('views/categoryForm.php');
+        require('views/categoryForm.php');
 
 } elseif ($_GET['action'] == 'add') {
 
@@ -24,7 +24,7 @@ if ($_GET['action'] == 'list') {
         header('Location:index.php?controller=categories&action=new');
         exit;
     } else {
-        $resultAdd = addCategory($_POST);
+        $resultAdd = addCategory($_POST, $_FILES);
 
         $_SESSION['messages'][] = $resultAdd ? 'Categorie enregistrée !' : "Erreur lors de l'enregistrement de la categorie... :(";
 
@@ -44,7 +44,7 @@ if ($_GET['action'] == 'list') {
             header('Location:index.php?controller=categories&action=edit&id=' . $_GET['id']);
             exit;
         } else {
-            $result = updateCategory($_GET['id'], $_POST);
+            $result = updateCategory($_GET['id'], $_POST, $_FILES);
             $_SESSION['messages'][] = $result ? 'Categorie mise à jour !' : 'Erreur lors de la mise à jour... :(';
             header('Location:index.php?controller=categories&action=list');
             exit;
