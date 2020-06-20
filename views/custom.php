@@ -19,7 +19,7 @@
     <?php foreach($shoes as $shoe):?>
         <div class="product-container">
             <div class="product-img">
-                <img src="assets/img/shoe.jpg" alt="" class="shoes-img">
+                <img src="assets/img/shoes/<?= $shoe['image']; ?>" class="" alt="<?= $shoe['name']; ?>">
             </div>
             <br>
             <div class="product-info">
@@ -41,7 +41,7 @@
         <?php foreach($soles as $sole):?>
             <div class="product-container">
                 <div class="product-img">
-                    <img src="assets/img/shoe.jpg" alt="" class="shoes-img">
+                    <img src="assets/img/soles/<?= $sole['image']; ?>" class="" alt="<?= $sole['name']; ?>">
                 </div>
                 <br>
                 <div class="product-info">

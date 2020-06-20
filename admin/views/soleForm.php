@@ -26,6 +26,7 @@ ici formulaire des Semelles<br><br>
 - nom (champ text)<br>
 - size <br><br>
 - price <br>
+- quantité <br>
 - img
 
 

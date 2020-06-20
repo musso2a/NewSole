@@ -11,13 +11,22 @@
 </head>
 <?php require 'partials/header.html'; ?>
 <body>
+
+<?php if(isset($_SESSION['messages'])): ?>
+    <div>
+        <?php foreach($_SESSION['messages'] as $message): ?>
+            <?= $message ?><br>
+        <?php endforeach;?>
+    </div>
+<?php endif;?>
+
 <div class="form-container">
     <div class="connect">
         <h2>CONNEXION</h2>
-        <form action="index.php?p=login&action=connect" method="post">
+        <form action="index.php?page=Login&action=connect" method="post">
 
-            <label for="email"></label>
-            <input id="email" type="email" name="email" required placeholder="Email" value=""><br>
+            <label for="mail"></label>
+            <input id="email" type="mail" name="mail" required placeholder="Email" value=""><br>
 
             <label for="password"></label>
             <input id="password" type="password" name="password" required placeholder="Mot de passe"><br>

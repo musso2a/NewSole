@@ -38,7 +38,7 @@
             ?>
             <div class="product-container">
                 <div class="product-img">
-                <img src="images/products/<?= $product['image']; ?>" class="" alt="<?= $product['name']; ?>">
+                <img src="assets/img/customs/<?= $product['image']; ?>" class="" alt="<?= $product['name']; ?>">
                 </div>
                 <h3><?= $product['name']; ?></h3>
                 <div class="mb-3">Catégorie :

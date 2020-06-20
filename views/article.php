@@ -18,10 +18,10 @@
             </div>
             <div><?= $selectedProduct['description']; ?></div>
             <h3><?= $selectedProduct['price']; ?> €</h3>
-            <div class="row mt-4">
+            <div class="">
                 <?php foreach($selectedProduct['image'] as $image): ?>
-                    <div class="col-lg-4">
-                        <img class="img-fluid mb-4" src="images/products/<?= $image; ?>" alt="<?= $product['name']; ?>">
+                    <div class="">
+                        <img class="" src="img/customs/<?= $image; ?>" alt="<?= $selectedProduct['name']; ?>">
                     </div>
                 <?php endforeach; ?>
             </div>

@@ -1,7 +1,5 @@
 <?php
 
-
-
 require('models/Category.php');
 
 

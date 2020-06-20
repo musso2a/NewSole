@@ -47,3 +47,7 @@ if(isset($_GET['page'])):
 else:
     require 'controllers/indexController.php';
 endif;
+
+if(isset($_SESSION['messages'])){
+    unset($_SESSION['messages']);
+}

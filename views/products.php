@@ -28,7 +28,7 @@
     <?php foreach ($products as $product): ?>
     <div class="product-container">
         <div class="product-img">
-            <img src="assets/img/shoe.jpg" alt="" class="shoes-img">
+            <img src="assets/img/customs/<?= $product['image']; ?>" class="" alt="<?= $product['name']; ?>">
         </div>
         <br>
         <h4 class="product-name"><?= $product['name']; ?></h4>

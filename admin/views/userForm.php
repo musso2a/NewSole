@@ -23,10 +23,12 @@
 
 ici formulaire d'un Utilisateur<br><br>
 
-- nom (champ text)<br>
-- size <br><br>
-- price <br>
-- img
+- nom <br>
+- Prénom <br><br>
+- email <br>
+- mot de passe<br>
+- adresse<br>
+- privilége<br>
 
 
 <form action="index.php?controller=users&action=<?= isset($user) || (isset($_SESSION['old_inputs']) && $_GET['action'] == 'edit') ? 'edit&id='. $_GET['id'] : 'add' ?>" method="post" enctype="multipart/form-data">

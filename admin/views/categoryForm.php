@@ -22,8 +22,6 @@
 
 ici formulaire des Categories<br><br>
 
-- nom (champ text)<br>
-
 <form action="index.php?controller=categories&action=<?= isset($category) || (isset($_SESSION['old_inputs']) && $_GET['action'] == 'edit') ? 'edit&id='. $_GET['id'] : 'add' ?>" method="post" enctype="multipart/form-data">
 
     <label for="name">Nom :</label>
